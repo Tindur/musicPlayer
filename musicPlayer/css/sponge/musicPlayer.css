@@ -1,0 +1,99 @@
+.buttons
+{
+	height: 50px;
+	width: 100px;
+	background-size: 100px 50px;
+	float: left;
+}
+
+.small-buttons
+{
+	height: 50px;
+	width: 50px;
+	background-size: 45px 50px;
+	float: left;
+}
+
+#player
+{
+	position:relative;
+}
+
+#play
+{
+	background-image: url("play.png");
+}
+
+#stop
+{
+	background-image: url("stop.png");
+}
+
+#prev
+{
+	background-image: url("prev.png");
+}
+
+#squidward
+{
+	height: 50px;
+	width: 25px;
+	background-image: url("squidward.png");
+	background-size: 25px 50px;
+	float: left;
+}
+
+#next
+{
+	background-image: url("next.png");
+}
+
+#track
+{
+	height: 50px;
+	width: 380px;
+	float: left;
+	background-image: url("track.png");
+	background-size: 383px 50px;
+}
+
+#track-position
+{
+	height: 30px;
+	width: 33px;
+	position:absolute;
+	left:470px;
+	top:6px;
+	background-image: url("Gary.png");
+	background-size: 33px 30px;
+}
+
+#time-interval
+{
+	position: absolute;
+	left: 785px;
+	top: 20px;
+	font-size: 10pt;
+}
+
+#song-info
+{
+	position: absolute;
+	left: 630px;
+	top: 20px;
+	font-size: 10pt;
+	text-align: center;
+}
+
+#volume-control
+{
+	float: left;
+	height: 50px;
+}
+
+#volume
+{
+	background-image: url("yellow.png");
+	float:left;
+	height:	50px;
+}

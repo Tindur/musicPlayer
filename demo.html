@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My awesome site!</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="musicPlayer/javascript/musicPlayer.js"></script>
+	<link rel="stylesheet" type="text/css" href="musicPlayer/css/base/musicPlayer.css">
+	<script type="text/javascript" src="syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+	<script type="text/javascript" src="syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+	<link type="text/css" rel="stylesheet" href="syntaxhighlighter_3.0.83/styles/shCoreDefault.css"/>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+	<style>
+		body {
+			font-family: "Lucida Grande","Lucida Sans Unicode";
+			background: black;
+			color: white;
+		}
+		#main {
+			width: 850px;
+			/*padding: 19px 29px 29px;*/
+			margin: 0 auto;
+			padding: 1em 1em 1em 1em;
+			margin-top: 2em;
+			background: #232323;
+			border-radius: 12px;
+		}
+		h1{
+			padding: 3px;
+			color: white;
+		}
+		h2 {
+			color: white;
+		}
+		h3 {
+			color: #7fff00;
+		}
+		p {
+			color: white;
+		}
+		p i {
+			font-style: italic;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<h1>jQuery Music Player</h1>
+		<p>This is the results from an assignment in WEPO 2013 at Reykjavik University.</p>
+		<p><i>Note that including two or more musicplayers will result in strange behaviour.</i></p>
+		<h2>Features</h2>
+		<h3>HTML 5</h3>
+		<p>This Music Player uses HTML 5 audio element to play local mp3 files or files from some URL. </p>
+		<h3>Album artwork from Echonest</h3>
+		<p>Music Player comes with built in Album Artwork fetcher that compares the filename with the huge database from Echonest. The filenames should be very well structed. For example: Britney Spears - Toxic.mp3</p>
+		<h3>Local files and URL</h3>
+		<p>Music Player doesn't care whether you are playing music from your hard drive or loading the song from the Internet. Just throw something in the playlist array and start diddleing to some sweet tunes!</p>
+		<h3>Sponge Bob!</h3>
+		<p>SpongeBobbyFy the player to get some real groove going on. We highly reccomend cannabis + tequila intake hours before trying this.</p>
+		<h2>Dependencies</h2>
+		<p>This plugin requires only jQuery to work and was tested with version 1.9.1</p>
+		<h2>Installation</h2>
+		<p>Reference jQuery, musicPlayer.js and musicPlayer.css in your the HTML header</p>
+		<pre class="brush: html;">
+			<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js">
+			</script>
+			<script type="text/javascript" src="musicPlayer/javascript/musicPlayer.js">
+			</script>
+			<link rel="stylesheet" type="text/css" href="musicPlayer/css/base/musicPlayer.css">
+		</pre>
+		<h2>Using the Music Player</h2>
+		<h3>Basic player</h3>
+		<p>Create a div element and set the id or class to whatever you want</p>
+		<pre class="brush: html;">
+			<div id="musicPlayerDemo"></div>
+		</pre>
+		<p>In your script file, make an array with mp3 filenames, and send it to the musicPlayer </p>
+		<pre class="brush: js;">
+			var playlist = ["Britney Spears Toxic.mp3",
+						"Britney Spears Radar.mp3"];
+			$("#musicPlayerDemo").musicPlayer(playlist);
+		</pre>
+		<p>That will result in</p>
+		<div id="musicPlayer"></div>
+		<h3>With playlist</h3>
+		<pre class="brush: js;">
+				var playlist = ["Britney Spears Toxic.mp3",
+							"Britney Spears Radar.mp3"];
+				$("#musicPlayerDemo").musicPlayer(playlist, {playlist: true});
+			</pre>
+		<div id="musicPlayer2"></div>
+		<h3>Songs from URLs</h3>
+		<pre class="brush: js;">
+				var playlist = ["http://previews.7digital.com/clips/34/9522.clip.mp3",
+							"Britney Spears Radar.mp3"];
+				$("#musicPlayerDemo").musicPlayer(playlist, {playlist: true});
+			</pre>
+		<h3>SpongeBob</h3>
+		<p>To spongebobbify , add this to your script </p>
+		<pre class="brush: js;">
+				var playlist = ["http://previews.7digital.com/clips/34/9522.clip.mp3",
+							"Britney Spears Radar.mp3"];
+				$("#musicPlayerDemo").musicPlayer(playlist, {spongebob: true});
+		</pre>
+		<p>And then in your header, change the CSS location to the Spongebob CSS location</p>
+		<pre class="brush: html;">
+			<link rel="stylesheet" type="text/css" href="musicPlayer/css/sponge/musicPlayer.css">
+		</pre>
+		<h2>Options</h2>
+		<ul>
+			<li><p><i>playlist</i> - Default <i>False</i>. If set as True, it will append a little playlist just beneath the player.</p>
+			</li>
+			<li><p><i>autoplay</i> - Default <i>False</i> If set as True, it will annoy the user. Please don't use this.</p></li>
+			<li><p><i>defaultVolume</i> - Default <i>100 </i> which is also the maximum volume you can squeese out of the player.</p></li>
+		</ul>
+
+	</div>
+	<script type="text/javascript">
+		var playlist = ["Britney Spears - Toxic.mp3",
+						"Britney Spears - Radar.mp3",
+						"AltJ - Breezeblocks.mp3"];
+		$("#musicPlayer").musicPlayer(playlist);
+		$("#musicPlayer2").musicPlayer(playlist, {playlist: true});
+	</script>
+</body>
+</html>

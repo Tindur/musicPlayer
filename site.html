@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>musicplayer</title>
+</head>
+<body>
+	<div id="musicPlayer">
+	</div>
+	
+	<link rel="stylesheet" type="text/css" href="musicPlayer/css/sponge/musicPlayer.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="musicPlayer/javascript/musicPlayer.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+		var playlist = ["Britney Spears - Toxic.mp3",
+						"Britney Spears - Radar.mp3",
+						"AltJ - Breezeblocks.mp3"];
+		$("#musicPlayer").musicPlayer(playlist, {spongebob: true});
+
+		});
+	</script>
+</body>
+</html>
